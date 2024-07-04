@@ -307,13 +307,13 @@ nav{
         width: calc(100% - 80px);
     }
     .search-conatiner{
-        height: 3vh;
+        height: 2.8vh;
     }
     #search-bar{
-        height: 2.5vh;
+        height: 2.6vh;
     }
     #search-button{
-        height: 2.5vh;
+        height: 2.6vh;
     }
 }
 @media (max-width : 820px) {
