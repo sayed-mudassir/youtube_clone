@@ -48,6 +48,13 @@ for (let i = 0; i < links.length; i++) {
       }
   }
 
+  searchBar.addEventListener("focus",(event)=>{
+    event.target.style.border = "1px solid #1d62b9"
+  });
+  searchBar.addEventListener("blur",(event)=>{
+    event.target.style.border = "none"
+  });
+
 searchButton.addEventListener("click",()=>{
     if(searchBar.value){
         searchVideos(searchBar.value, 50, "snippet");
@@ -58,25 +65,4 @@ searchButton.addEventListener("click",()=>{
 })
 
 
-// {kind: 'youtube#searchListResponse', etag: '8JGE76HkYQx_PwgftI91lS9z3MM', nextPageToken: 'CDIQAA', regionCode: 'IN', pageInfo: {…}, …}
-// etag
-// : 
-// "8JGE76HkYQx_PwgftI91lS9z3MM"
-// items
-// : 
-// (50) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-// kind
-// : 
-// "youtube#searchListResponse"
-// nextPageToken
-// : 
-// "CDIQAA"
-// pageInfo
-// : 
-// {totalResults: 1000000, resultsPerPage: 50}
-// regionCode
-// : 
-// "IN"
-// [[Prototype]]
-// : 
-// Object
+
