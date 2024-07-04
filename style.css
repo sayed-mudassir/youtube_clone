@@ -300,6 +300,15 @@ nav{
         margin-left: 65px;
         width: calc(100% - 70px);
     }
+    .search-conatiner{
+        height: 2.8vh;
+    }
+    #search-bar{
+        height: 2.6vh;
+    }
+    #search-button{
+        height: 2.6vh;
+    }
 }
 @media (600px <= width <= 992px) {
     .body{
@@ -354,13 +363,14 @@ nav{
         margin: -7px 5px 0;
     }
     #search-bar{
-        width: 90%;
+        width: 80%;
     }
     #search-button{
         justify-self: center;
         justify-content: center;
         align-items: center;
-        font-size: large;
+        font-size: medium;
+        width: 20%;
     }
     .video{
         min-height: 250px;
