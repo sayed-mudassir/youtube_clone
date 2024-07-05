@@ -20,6 +20,7 @@ body{
     padding-left: 0;
 }
 nav{
+    margin-top: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -280,6 +281,33 @@ nav{
 .logo2{
     display: none;
 }
+.bottom-menu{
+    /* border: 5px solid red; */
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    z-index: 10;
+}
+.aic{
+    align-items: center;
+    justify-content: center;
+    color: #030303;
+    padding: 0;
+}
+.aic img{
+    display: flex;
+    height: 30px;
+    margin: -7px 5px 0;
+}
+.aic p{
+    display: flex;
+    margin: 1px -2px 0;
+}
+
 @media(1400px <= width <= 1600px) {
     .body{
         grid-template-columns: (3, 1fr);
@@ -346,10 +374,31 @@ nav{
     .body{
         margin-top: 50px;
         grid-template-columns: 1fr;
-        width: calc(100% - 50px);
+        width: 100%;
+        margin: 0;
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .video{
+        margin: 0;
+        min-width: 120%;
+        height: auto;
     }
     .suggestions{
-        display: none;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        height: 40px;
+        padding: 0 2px;
+    }
+    .suggestion-options{
+        font-size: 12px;
+        cursor: pointer;
+        height: 15px;
+        padding-bottom: 20px;
+
     }
     #menu{
         display: none;
@@ -362,8 +411,18 @@ nav{
         height: 30px;
         margin: -7px 5px 0;
     }
+    .search-conatiner{
+        margin-top: -10px;
+        border: 1px solid #C6C6C6;
+        /* border: 2px solid rebeccapurple; */
+        border-radius: 20px;
+        width: 75%;
+        height: 4vh;
+        gap: 0;
+    }
     #search-bar{
         width: 80%;
+        height: 3.5vh;
     }
     #search-button{
         justify-self: center;
@@ -371,9 +430,26 @@ nav{
         align-items: center;
         font-size: medium;
         width: 20%;
+        height: 3.6vh;
     }
+
     .video{
         min-height: 250px;
         width: 75vw;
     }
+    #upload{
+        display: none;
+    }
+    #notifications{
+        display: none;
+    }
+    .bottom-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .sidebar{
+        display: none;
+    }
+    
 }
