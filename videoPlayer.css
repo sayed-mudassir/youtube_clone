@@ -1,0 +1,92 @@
+
+#player{
+    border: 2px solid red;
+    border-radius: 30px;
+    width: 90vw;
+    height: 80vh;
+    /* position: fixed;
+    left: 80px;
+    top: 80px; */
+}
+#player-container{
+    position: fixed;
+    left: 80px;
+    top: 80px;
+    width: 90vw;
+    height: 90vh;
+    border: 5px solid green;
+    overflow: hidden;
+    overflow: scroll;
+}
+#comments-conatiner{
+    /* border: 2px solid blue; */
+    width: 90vw;
+    font-size: 16px;
+    margin-left: 0;
+    /* overflow: scroll; */
+}
+.comments{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.comments img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#channel-detail{
+    border: 2px solid sienna;
+    width: 100%;
+    height: auto;
+}
+.youtuber-details{
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.channelLogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.channelLogo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* justify-content: space-around; */
+}
+.channelLogo button{
+    border: none;
+    gap: px;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+.action-buttons{
+    display: flex;
+    gap: 5px;
+}
+.action-buttons button{
+    width: 100px;
+    height: 40px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+}
+@media (max-width : 600px) {
+    #player{
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        padding: 10px;
+    }
+    
+}

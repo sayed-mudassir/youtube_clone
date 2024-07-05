@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="./videoPlayer.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>youtube clone</title>
+  </head>
+  <body id="body">
+    <nav id="navbar" class="nav">
+      <section id="start" class="faic">
+        <span class="material-symbols-outlined" id="menu">menu</span>
+        <img src="./img/logo.PNG" alt="logo" class="logo" />
+        <img src="./img/bell.PNG" alt="logo" class="logo2" />
+        <!-- <h1>youtube</h1> -->
+      </section>
+
+      <section id="search-conatiner" class="search-conatiner faic">
+        <input
+          type="text"
+          name="search-bar"
+          id="search-bar"
+          placeholder="search"
+        />
+        <button class="material-symbols-outlined" id="search-button">
+          search
+        </button>
+      </section>
+      <section id="user-options" class="user-options">
+        <span class="material-symbols-outlined" id="upload"> video_call </span>
+        <span class="material-symbols-outlined" id="notifications">
+          notifications
+        </span>
+        <span class="material-symbols-outlined"> account_circle </span>
+      </section>
+    </nav>
+    <section id="player-container">
+      <div id="player"></div>
+      <div id="channel-detail">
+        <div class="video-description">
+          <h3>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+            veritatis molestiae nulla deleniti, fugit eligendi. Quo ea sequi
+          </h3>
+        </div>
+        <div class="youtuber-details">
+          <div class="channelLogo">
+            <img src="https://images.unsplash.com/photo-1520699713260-70e01f7c2998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            <div>
+              <p class="youtuber-name"><b>Zakir khan</b></p>
+              <p class="subscriber-count">48M</p>
+            </div>
+            <button class="subscribe">subscribe</button>
+          </div>
+          <div class="action-buttons">
+            <button class="material-symbols-outlined">thumb_up</button>
+            <button class="material-symbols-outlined">thumb_down</button>
+            <button class="material-symbols-outlined">share</button>
+            <button class="material-symbols-outlined">save</button>
+            <button class="material-symbols-outlined">cut</button>
+            <button class="material-symbols-outlined">more</button>
+          </div>
+        </div>
+      </div>
+      <div id="comments-conatiner">
+        <div class="comments">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1520699713260-70e01f7c2998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="profile"
+            />
+          </div>
+          <div>
+            <p><b>@channelName</b></p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id porro
+              obcaecati veniam recusandae excepturi et expedita officia soluta
+              sequi hic ducimus accusamus, adipisci voluptate qui fugit
+              consectetur maxime vitae asperiores.
+            </p>
+            <span class="material-symbols-outlined"> thumb_up </span>
+            <span class="material-symbols-outlined"> thumb_down </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="./index.html">index</a>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./script.js"></script>
+    <script src="./videoPLayer.js"></script>
+  </body>
 </html>

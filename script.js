@@ -73,23 +73,9 @@ async function fetchChannelLogo(channelId) {
   }
 }
 // fetchChannelLogo("UCt2JXOLNxqry7B_4rRZME3Q")
-async function getComments(vidId) {
-  try {
-    const response = await fetch(
-      BASE_URL +
-        "/comments" +
-        `?key=${API_KEY}
-          &videoId=${vidId}
-          &part=snippet`
-    );
-    const data = await response.json();
-    console.log(data);
-  } catch (e) {
-    console.log(e);
-  }
-}
-// getComments("OFMIJXUYI-E")
-// getComments("uV50UfcIT68")
+
+
+
 
 async function fetchVideo() {
   body.innerHTML = ``;
@@ -190,4 +176,4 @@ function formatViewCount(viewCount) {
   }
 }
 
-fetchVideo();
+// fetchVideo();
