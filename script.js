@@ -175,5 +175,4 @@ function formatViewCount(viewCount) {
       return viewCount.toString();
   }
 }
-
-// fetchVideo();
+fetchVideo();
