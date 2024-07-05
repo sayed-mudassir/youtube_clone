@@ -306,6 +306,13 @@ nav{
 .aic p{
     display: flex;
     margin: 1px -2px 0;
+    font-size: 15px;
+}
+#sub{
+    margin: 1px -25px 0;
+}
+.last{
+    padding-right: 20px;
 }
 
 @media(1400px <= width <= 1600px) {
@@ -329,13 +336,25 @@ nav{
         width: calc(100% - 70px);
     }
     .search-conatiner{
-        height: 2.8vh;
+        margin-top: -10px;
+        border: 1px solid #C6C6C6;
+        /* border: 2px solid rebeccapurple; */
+        border-radius: 20px;
+        width: 50%;
+        height: 4vh;
+        gap: 0;
     }
     #search-bar{
-        height: 2.6vh;
+        width: 80%;
+        height: 3.5vh;
     }
     #search-button{
-        height: 2.6vh;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        font-size: medium;
+        width: 20%;
+        height: 3.6vh;
     }
 }
 @media (600px <= width <= 992px) {
@@ -343,15 +362,7 @@ nav{
         grid-template-columns: repeat(3, 1fr);
         width: calc(100% - 80px);
     }
-    .search-conatiner{
-        height: 2.8vh;
-    }
-    #search-bar{
-        height: 2.6vh;
-    }
-    #search-button{
-        height: 2.6vh;
-    }
+    
 }
 @media (max-width : 820px) {
     .body{
