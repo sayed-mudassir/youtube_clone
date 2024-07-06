@@ -1,8 +1,8 @@
 
 #player{
-    border: 2px solid red;
-    border-radius: 30px;
-    width: 90vw;
+    /* border: 2px solid red; */
+    border-radius: 15px;
+    width: 95vw;
     height: 80vh;
     /* position: fixed;
     left: 80px;
@@ -10,13 +10,51 @@
 }
 #player-container{
     position: fixed;
-    left: 80px;
+    left: 2%;
     top: 80px;
-    width: 90vw;
+    width: 95vw;
     height: 90vh;
-    border: 5px solid green;
+    /* border: 5px solid green; */
+    box-sizing: border-box;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.442); */
+    /* border-radius: 30px; */
     overflow: hidden;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+#player-container::-webkit-scrollbar{
+    display: none;
+}
+.like-dislike{
+    background-color: #F2F2F2;
+   border: 1px solid #dbdbdb;
+   border-radius: 30px;
+   width: 150px;
+   display: flex;
+}
+.description{
+    /* border: 2px solid black; */
+    height: auto;
+    border-radius: 10px ;
+    background-color: #F2F2F2;
+    color: #161616;
+    padding: 10px;
+    font-size: 16px;
+}
+.description pre{
+    /* font-family:Arial, Helvetica, sans-serif; */
+    white-space: pre-wrap; /* Wraps the text */
+    word-wrap: break-word; /* Breaks long words */
+    background-color: #f4f4f4; /* Light grey background like <p> */
+    padding: 10px; /* Adds padding similar to <p> */
+    /* border: 1px solid #ddd; Adds border to look like a <p> */
+    border-radius: 4px; /* Rounded corners */
+    font-family: sans-serif;
+    margin-top: 0;
+}
+.description p{
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 #comments-conatiner{
     /* border: 2px solid blue; */
@@ -38,12 +76,12 @@
     margin-right: 10px;
 }
 #channel-detail{
-    border: 2px solid sienna;
+    /* border: 2px solid sienna; */
     width: 100%;
     height: auto;
 }
 .youtuber-details{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,8 +96,12 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin: 10px;
     /* justify-content: space-around; */
+}
+.video-description{
+    margin: 10px;
+    margin-bottom: 0;
 }
 .channelLogo button{
     border: none;
@@ -77,8 +119,27 @@
 .action-buttons button{
     width: 100px;
     height: 40px;
-    background-color: #F2F2F2;
+    background-color:#F2F2F2;
     border-radius: 20px;
+    border: none;
+}
+.like-dislike{
+    gap: 0;
+}
+.like-dislike span{
+    align-self: center;
+    padding-left: 8%;
+    padding-right: 0;
+    margin-right: 0;
+}
+#like{
+    border-right: 1px solid #b5b5b5;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 90%;
+}
+#dislike{
+    width: 10%;
 }
 @media (max-width : 600px) {
     #player{
@@ -88,5 +149,6 @@
         height: 40vh;
         padding: 10px;
     }
+    
     
 }

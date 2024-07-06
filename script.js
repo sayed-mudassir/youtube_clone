@@ -1,3 +1,4 @@
+
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 const video_http = "https://www.googleapis.com/youtube/v3/videos?";
 const channel_http = "https://www.googleapis.com/youtube/v3/channels?";
@@ -45,7 +46,8 @@ async function fetchVideoStats(vid_data, typeOfDetails) {
     }
     let statisticsObj = {
       viewCount : formatViewCount(data.items[0].statistics.viewCount),
-      likeCount : formatViewCount(data.items[0].statistics.likeCount)
+      likeCount : formatViewCount(data.items[0].statistics.likeCount),
+      fullViewCount:data.items[0].statistics.viewCount
     }
     return statisticsObj;
   } catch (e) {
@@ -92,13 +94,15 @@ async function fetchVideo() {
     );
     const data = await response.json();
     data.items.forEach((item) => {
-      getChannelIcon(item);
+      console.log(item.snippet.publishedAt);
+      const publishedAt = timeAgo(item.snippet.publishedAt);
+      getChannelIcon(item,publishedAt);
     });
   } catch (e) {
     console.log(e);
   }
 }
-async function getChannelIcon(video_data) {
+async function getChannelIcon(video_data,publishedAt) {
   try {
     const response = await fetch(
       channel_http +
@@ -113,16 +117,16 @@ async function getChannelIcon(video_data) {
     const duration = await fetchVideoStats(video_data, "contentDetails");
     const Count = await fetchVideoStats(video_data,"statistics");
     // console.log();
-    makeVideoCard(video_data, duration,Count.viewCount,Count.likeCount);
+    makeVideoCard(video_data, duration,Count.viewCount,publishedAt);
   } catch (e) {
     console.log(e);
   }
 }
 
-const makeVideoCard = (data, duration, viewCount,likeCount) => {
+const makeVideoCard = (data, duration, viewCount,publishedAt) => {
   const videoContainer = document.createElement("div");
   videoContainer.innerHTML = `
-  <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
+  <div class="video">
       <div class="faic">
         <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
         <div class="time faic">${duration}</div>
@@ -132,12 +136,17 @@ const makeVideoCard = (data, duration, viewCount,likeCount) => {
           <div class="info">
               <h4 class="title">${data.snippet.title}</h4>
               <p class="channel-name">${data.snippet.channelTitle}</p>
-              <p class="views channel-name">${viewCount} views | ${likeCount} likes</p>
+              <p class="views channel-name">${viewCount} views | ${publishedAt}</p>
           </div>
       </div>
   </div>
   `;
   fetchVideoStats(data.id, "contentDetails");
+  videoContainer.addEventListener("click",()=>{
+    location.href = `./videoPlayer.html?id=${data.id}`;
+
+    // console.log(data.id);
+  })
   body.appendChild(videoContainer);
 };
 
