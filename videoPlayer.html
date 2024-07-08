@@ -7,6 +7,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./videoPlayer.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>youtube clone</title>
@@ -15,8 +21,18 @@
     <nav id="navbar" class="nav">
       <section id="start" class="faic">
         <span class="material-symbols-outlined" id="menu">menu</span>
-        <img src="./img/logo.PNG" alt="logo" class="logo" />
-        <img src="./img/bell.PNG" alt="logo" class="logo2" />
+        <img
+          onclick="location.href='./index.html'"
+          src="./img/logo.PNG"
+          alt="logo"
+          class="logo"
+        />
+        <img
+          onclick="location.href='./index.html'"
+          src="./img/bell.PNG"
+          alt="logo"
+          class="logo2"
+        />
         <!-- <h1>youtube</h1> -->
       </section>
 
@@ -27,7 +43,7 @@
           id="search-bar"
           placeholder="search"
         />
-        <button class="material-symbols-outlined" id="search-button">
+        <button class="material-symbols-outlined" id="search-button" style="color: black;">
           search
         </button>
       </section>
@@ -47,8 +63,8 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
             veritatis molestiae nulla deleniti, fugit eligendi. Quo ea sequi
           </h3>
-        </div>
-        <div class="youtuber-details">
+        </div> -->
+        <!-- <div class="youtuber-details">
           <div class="channelLogo">
             <img
               src="https://images.unsplash.com/photo-1520699713260-70e01f7c2998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -62,40 +78,45 @@
           </div>
           <div class="action-buttons">
             <div class="like-dislike">
-              <button id="like" class="material-symbols-outlined">
+              <span class="s">20K</span>
+              <span id="like" class="material-symbols-outlined">
                 thumb_up
-              </button>
-              <button class="material-symbols-outlined dislike">
+              </span>
+              <span class="material-symbols-outlined dislike">
                 thumb_down
-              </button>
+              </span>
             </div>
-            <button class="material-symbols-outlined">share</button>
-            <button class="material-symbols-outlined">save</button>
-            <button class="material-symbols-outlined">cut</button>
-            <button class="material-symbols-outlined">more</button>
+            <span class="material-symbols-outlined">share</span>
+            <span class="material-symbols-outlined">save</span>
+            <span class="material-symbols-outlined">cut</span>
+            <span class="material-symbols-outlined">more</span>
           </div>
         </div> -->
       </div>
       <div id="description" class="description">
+        <!--  -->
       </div>
       <div id="comments-conatiner">
-        <div class="comments">
-          <!-- <div>
-            <img
-              src="https://images.unsplash.com/photo-1520699713260-70e01f7c2998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="profile"
-            />
-          </div>
-          <div>
-            <p><b>@channelName</b></p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id porro
-              obcaecati veniam recusandae excepturi et expedita officia soluta
-              sequi hic ducimus accusamus, adipisci voluptate qui fugit
-              consectetur maxime vitae asperiores.
+        <!--  -->
+      </div>
+    </section>
+    <section id="suggetested-videos" class="suggetested-videos">
+      <!-- <div class="videos">
+        <div class="fraic">
+          <img
+            src="https://i.ytimg.com/vi/vidId/hqdefault.jpg"
+            class="thumbnail"
+            alt=""
+          />
+          <div class="durations faic">22:00</div>
+        </div>
+        <div class="contents">
+          <div class="info">
+            <h4 class="title">${data.snippet.title}</h4>
+            <p class="channel-name">${data.snippet.channelTitle}</p>
+            <p class="views channel-name">
+              ${viewCount} views | ${publishedAt}
             </p>
-            <span class="material-symbols-outlined"> thumb_up </span>
-            <span class="material-symbols-outlined"> thumb_down </span>
           </div>
         </div>
       </div> -->

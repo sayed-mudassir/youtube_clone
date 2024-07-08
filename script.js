@@ -5,7 +5,14 @@ const channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
 const body = document.getElementById("body");
 
-const API_KEY = "AIzaSyCu4znECfXCutH07IzgcdbEFoSyzUqkpG0";
+// const API_KEY = "AIzaSyCu4znECfXCutH07IzgcdbEFoSyzUqkpG0";
+// const API_KEY = "AIzaSyDi2Dh2lyrIFTQqbtiNYY-dfNCrb8gDXU0";
+// const API_KEY = "AIzaSyDWA7ibwh-ih_oNds31MD5e0aKdrBd3RJU"; 
+// const API_KEY = "AIzaSyAX4mX5elU3n_O7QOWvAcIa3doVAotRW30";
+// const API_KEY = "AIzaSyA2xcLh-3cs-SV4kNyOWN0OMdc9uR-QUx8";
+// const API_KEY = "AIzaSyA1p3UY00G4OcuCxYOzZA2QgqBmSXI5puU";
+// const API_KEY = "AIzaSyCEPRZX12-661oGy2OlNL162DWyqUBbnjo"
+const API_KEY = "AIzaSyD5gq-If5c-ULOW_i97T8NTc5DTMr4-Tmc";
 
 async function searchVideos(searchQuery, maxResult, typeOfDetails) {
   body.innerHTML = ``;
@@ -27,7 +34,7 @@ async function searchVideos(searchQuery, maxResult, typeOfDetails) {
     console.log(e);
   }
 }
-// searchVideos("a", 1, "snippet");
+searchVideos("random", 50, "snippet");
 
 async function fetchVideoStats(vid_data, typeOfDetails) {
   try {
@@ -144,7 +151,6 @@ const makeVideoCard = (data, duration, viewCount,publishedAt) => {
   fetchVideoStats(data.id, "contentDetails");
   videoContainer.addEventListener("click",()=>{
     location.href = `./videoPlayer.html?id=${data.id}`;
-
     // console.log(data.id);
   })
   body.appendChild(videoContainer);
@@ -184,4 +190,4 @@ function formatViewCount(viewCount) {
       return viewCount.toString();
   }
 }
-fetchVideo();
+// fetchVideo();
